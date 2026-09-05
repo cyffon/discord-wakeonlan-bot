@@ -35,7 +35,7 @@ const commands: Record<string, Cmd> = {
 
       const wolPacket = Buffer.concat([
         Buffer.alloc(6, 0xff),
-        Buffer.alloc(16, macAddrBuffer),
+        Buffer.alloc(96, macAddrBuffer),
       ])
 
       const socket = dgram.createSocket("udp4");
